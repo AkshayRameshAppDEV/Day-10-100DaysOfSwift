@@ -21,3 +21,7 @@ Day 10 of 100 Days of Swift.
 
 ### 3. Overriding Methods
   - new implementations of existing parent class methods - usually prefixed by override
+
+### 4. Final Classes
+  - Classes which are prefixed final can stop subclasses which cannot inherit properties from super class
+  - use final class as it is
