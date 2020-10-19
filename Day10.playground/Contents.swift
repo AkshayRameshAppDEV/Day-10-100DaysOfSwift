@@ -60,3 +60,21 @@ class IPL: Cricket {
 
 let csk = IPL(team: "CSK")
 csk.cheer()
+
+// Final Class
+// Classes which are prefixed final can stop subclasses which cannot inherit properties from super class
+// use final class as it is
+
+final class SuperFinalClass {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+}
+
+// Below code results in error because subFinal class cannot inherit SuperFinalClass because it is marked final
+//class subFinal: SuperFinalClass {
+//
+//}
