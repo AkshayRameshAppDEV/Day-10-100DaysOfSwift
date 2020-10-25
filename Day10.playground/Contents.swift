@@ -78,3 +78,59 @@ final class SuperFinalClass {
 //class subFinal: SuperFinalClass {
 //
 //}
+
+
+// Copying
+// When a class is copied to another variable - it points to same object in memory
+// When a struct is copied on other hand to another variable - both are different and it points to different object in memory.
+// class is a refrence type
+// struct is a value type
+class CopyMe {
+    var name = "CopyMe"
+}
+var original = CopyMe()
+original.name
+
+var copy = original
+copy.name = "ChangingCopyMe"
+original.name // here it is changing the original
+
+struct Akshay {
+    var name = "Akshay"
+}
+var a = Akshay()
+a.name
+
+var b = a
+b.name = "Changing Akshay"
+a.name // not changed! because it is a struct
+
+
+// Deinitializers
+// To clean up when object is destoryed
+// structs dont have deinit
+class Deinitializer {
+    var name = "deinit"
+    
+    func greeting() {
+        print("Hello \(self.name)")
+    }
+    deinit {
+        print("I am destroyed!\n Regards,\n\(self.name)")
+    }
+}
+
+for _ in 1...10 {
+    print("--------------------")
+    let deInit = Deinitializer()
+    deInit.greeting()
+}
+
+// Mutability
+// When class is created constant using let then can change variable properties
+class Singer {
+    var name = "Eminem"
+}
+ let s = Singer()
+s.name = "Akshay"
+s.name
