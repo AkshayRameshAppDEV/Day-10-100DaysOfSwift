@@ -25,3 +25,17 @@ Day 10 of 100 Days of Swift.
 ### 4. Final Classes
   - Classes which are prefixed final can stop subclasses which cannot inherit properties from super class
   - use final class as it is
+
+### 5. Copying
+  - When a class is copied to another variable - it points to same object in memory
+  - When a struct is copied on other hand to another variable - both are different and it points to different object in memory.
+  - class is a refrence type
+  - struct is a value type
+
+### 6. Deinitializers
+  - To clean up when object is destoryed
+  - structs dont have deinit
+
+### 7. Mutability
+  - When class is created constant using let then can change variable properties
+  
